@@ -51,8 +51,8 @@ ap-southeast-1 (Singapore)
 │   └── Flow Log role: CloudWatch write (scoped to specific log group ARN)
 │
 └── Terraform State
-├── S3 backend  : encrypted + versioned
-└── State lock  : S3 native lockfile (Terraform v1.10+)
+├── S3 backend : encrypted + versioned
+└── State lock : S3 native lockfile (Terraform v1.10+)
 
 ---
 
