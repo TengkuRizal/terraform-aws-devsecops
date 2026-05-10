@@ -95,6 +95,7 @@ Intentionally skipped (with justification):
 ---
 
 ## Project Structure
+<pre>
 terraform-aws-devsecops/
 ├── .checkov.yaml              # Checkov config and skip rules
 ├── .gitignore                 # Excludes state files and sensitive tfvars
@@ -109,7 +110,7 @@ terraform-aws-devsecops/
 ├── s3/                    # Secure S3 with all security controls
 ├── iam/                   # EC2 role, instance profile, least privilege
 └── security_groups/       # Bastion and app tier SGs
-
+</pre>pre>
 ---
 
 ## How to Deploy
