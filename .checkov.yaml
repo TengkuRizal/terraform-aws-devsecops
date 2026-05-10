@@ -1,0 +1,12 @@
+soft-fail: false
+framework:
+  - terraform
+skip-check:
+  - CKV_AWS_144
+  - CKV_AWS_338
+  - CKV_AWS_158
+  - CKV_AWS_145
+  - CKV2_AWS_5
+  - CKV2_AWS_62
+output:
+  - cli
