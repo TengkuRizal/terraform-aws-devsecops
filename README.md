@@ -26,8 +26,8 @@ ap-southeast-1 (Singapore)
 │
 ├── VPC: 10.0.0.0/16
 │   ├── Public Subnets (x2, multi-AZ)
-│   │   ├── 10.0.0.0/24 (ap-southeast-1a)
-│   │   └── 10.0.1.0/24 (ap-southeast-1b)
+│   │   ├── 10.0.0.0/24  (ap-southeast-1a)
+│   │   └── 10.0.1.0/24  (ap-southeast-1b)
 │   ├── Private Subnets (x2, multi-AZ)
 │   │   ├── 10.0.10.0/24 (ap-southeast-1a)
 │   │   └── 10.0.11.0/24 (ap-southeast-1b)
@@ -36,8 +36,8 @@ ap-southeast-1 (Singapore)
 │   └── VPC Flow Logs → CloudWatch (7-day retention)
 │
 ├── Security Groups
-│   ├── Bastion SG: SSH from admin IP only, HTTPS/HTTP egress only
-│   └── App SG: HTTP from Bastion SG only, HTTPS egress only
+│   ├── Bastion SG : SSH from admin IP only, HTTPS/HTTP egress only
+│   └── App SG     : HTTP from Bastion SG only, HTTPS egress only
 │
 ├── S3 Bucket
 │   ├── AES-256 encryption at rest
@@ -47,12 +47,12 @@ ap-southeast-1 (Singapore)
 │   └── Lifecycle: expire at 90 days, abort incomplete uploads at 7 days
 │
 ├── IAM
-│   ├── EC2 role: S3 read-only (scoped to specific bucket ARN)
+│   ├── EC2 role     : S3 read-only (scoped to specific bucket ARN)
 │   └── Flow Log role: CloudWatch write (scoped to specific log group ARN)
 │
 └── Terraform State
-├── S3 backend: encrypted + versioned
-└── State locking: S3 native lockfile (Terraform v1.10+)
+├── S3 backend  : encrypted + versioned
+└── State lock  : S3 native lockfile (Terraform v1.10+)
 
 ---
 
@@ -84,7 +84,7 @@ Intentionally skipped (with justification):
 |---|---|
 | CKV_AWS_338 | Log retention < 1 year — free tier cost constraint |
 | CKV_AWS_158 | CloudWatch KMS — cost constraint, acceptable for non-regulated homelab |
-| CKV_AWS_145 | S3 KMS — same rationale, AES-256 provides encryption at rest |
+| CKV_AWS_145 | S3 KMS — AES-256 provides encryption at rest |
 | CKV2_AWS_5  | SGs not attached to EC2 — by design, no EC2 in this module |
 | CKV2_AWS_62 | S3 event notifications — not required for this use case |
 
@@ -92,19 +92,19 @@ Intentionally skipped (with justification):
 
 ## Project Structure
 terraform-aws-devsecops/
-├── .checkov.yaml
-├── .gitignore
+├── .checkov.yaml              # Checkov config and skip rules
+├── .gitignore                 # Excludes state files and sensitive tfvars
 ├── environments/
 │   └── dev/
-│       ├── backend.tf
-│       ├── main.tf
-│       ├── variables.tf
-│       └── outputs.tf
+│       ├── backend.tf         # S3 remote state + native lockfile
+│       ├── main.tf            # Root module, provider config, default tags
+│       ├── variables.tf       # Input variable declarations
+│       └── outputs.tf         # VPC, subnet, S3 ARN outputs
 └── modules/
-├── vpc/
-├── s3/
-├── iam/
-└── security_groups/
+├── vpc/                   # VPC, subnets, IGW, route tables, flow logs
+├── s3/                    # Secure S3 with all security controls
+├── iam/                   # EC2 role, instance profile, least privilege
+└── security_groups/       # Bastion and app tier SGs
 
 ---
 
@@ -120,7 +120,7 @@ terraform init
 terraform plan
 terraform apply
 
-# 3. Destroy when done
+# 3. Destroy when done (free tier protection)
 terraform destroy
 ```
 
@@ -139,6 +139,6 @@ terraform destroy
 
 ## Author
 
-**Tengku Rizal** — DevSecOps Engineer
-Building: GitLab CI/CD · Kubernetes · Wazuh SIEM · Terraform · Security Automation
+**Tengku Rizal** — DevSecOps Engineer  
+Building: GitLab CI/CD · Kubernetes · Wazuh SIEM · Terraform · Security Automation  
 Location: Kuala Lumpur, Malaysia
