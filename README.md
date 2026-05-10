@@ -22,6 +22,9 @@ This is part of a broader homelab DevSecOps portfolio that includes:
 ---
 
 ## Architecture
+## Architecture
+
+<pre>
 ap-southeast-1 (Singapore)
 │
 ├── VPC: 10.0.0.0/16
@@ -51,8 +54,9 @@ ap-southeast-1 (Singapore)
 │   └── Flow Log role: CloudWatch write (scoped to specific log group ARN)
 │
 └── Terraform State
-├── S3 backend : encrypted + versioned
-└── State lock : S3 native lockfile (Terraform v1.10+)
+    ├── S3 backend : encrypted + versioned
+    └── State lock : S3 native lockfile (Terraform v1.10+)
+</pre>
 
 ---
 
