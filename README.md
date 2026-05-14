@@ -94,7 +94,7 @@ Skipped checks: **0**
 Intentionally skipped with justification:
 
 | Check | Reason |
-|---|---|
+| --- | --- |
 | CKV_AWS_338 | Log retention less than 1 year due to free-tier cost constraint |
 | CKV_AWS_158 | CloudWatch KMS encryption skipped due to cost constraint for non-regulated homelab |
 | CKV_AWS_145 | S3 KMS skipped because SSE-S3 AES-256 provides encryption at rest for this lab |
