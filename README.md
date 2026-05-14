@@ -235,6 +235,13 @@ Example explanation:
 
 ---
 
+## Documentation
+
+- [Production Readiness Review](docs/production-readiness.md)
+- [Interview Explanation](docs/interview-explanation.md)
+
+---
+
 ## Author
 
 **Tengku Rizal** — DevSecOps Engineer  
