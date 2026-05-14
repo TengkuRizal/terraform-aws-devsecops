@@ -117,9 +117,9 @@ The purpose of this pipeline is to detect Terraform formatting issues, validatio
 
 ---
 
-<pre>
 ## Project Structure
 
+```text
 terraform-aws-devsecops/
 ├── .github/
 │   └── workflows/
@@ -140,8 +140,7 @@ terraform-aws-devsecops/
     ├── s3/
     ├── security_groups/
     └── vpc/
-
-</pre>
+```
 
 ---
 
