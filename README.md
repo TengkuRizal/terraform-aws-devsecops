@@ -121,8 +121,6 @@ The purpose of this pipeline is to detect Terraform formatting issues, validatio
 <pre>
 ## Project Structure
 
-## Project Structure
-
 <pre>
 terraform-aws-devsecops/
 ├── .github/
