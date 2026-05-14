@@ -23,7 +23,6 @@ This is part of a broader homelab DevSecOps portfolio that includes:
 ---
 
 ## Architecture
-## Architecture
 
 <pre>
 ap-southeast-1 (Singapore)
