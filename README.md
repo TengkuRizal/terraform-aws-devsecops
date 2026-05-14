@@ -94,9 +94,36 @@ Intentionally skipped (with justification):
 
 ---
 
+## CI/CD Security Pipeline
+
+This repository includes a GitHub Actions workflow that runs on every push and pull request to the `main` branch.
+
+Pipeline stages:
+
+```text
+Checkout Repository
+↓
+Setup Terraform
+↓
+Terraform fmt -check
+↓
+Terraform init -backend=false
+↓
+Terraform validate
+↓
+Checkov IaC Security Scan
+```
+
+The purpose of this pipeline is to detect Terraform formatting issues, validation errors, and infrastructure security misconfigurations before deployment.
+
+---
+
 <pre>
 ## Project Structure
 
+## Project Structure
+
+<pre>
 terraform-aws-devsecops/
 ├── .github/
 │   └── workflows/
@@ -117,8 +144,18 @@ terraform-aws-devsecops/
     ├── s3/
     ├── security_groups/
     └── vpc/
+
 </pre>
 
+---
+
+## Production Readiness
+
+This project is designed as a cost-conscious DevSecOps lab. For production use, additional controls such as NAT Gateway, VPC endpoints, KMS CMK, GuardDuty, Security Hub, AWS Config, centralized logging, and approval gates should be implemented.
+
+See: [Production Readiness Review](docs/production-readiness.md)
+
+---
 
 ## How to Deploy
 
