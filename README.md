@@ -2,6 +2,7 @@
 
 Infrastructure as Code (IaC) project deploying a secure, production-grade AWS environment using Terraform — with automated security scanning via Checkov integrated into the pipeline.
 
+![Terraform Security Pipeline](https://github.com/TengkuRizal/terraform-aws-devsecops/actions/workflows/terraform-security.yml/badge.svg)
 ![Checkov](https://img.shields.io/badge/Checkov-61%20passed%2C%200%20failed-brightgreen)
 ![Terraform](https://img.shields.io/badge/Terraform-v1.15.2-7B42BC?logo=terraform)
 ![AWS](https://img.shields.io/badge/AWS-ap--southeast--1-FF9900?logo=amazonaws)
