@@ -115,7 +115,7 @@ terraform-aws-devsecops/
     ├── s3/
     ├── iam/
     └── security_groups/
-</pre>pre>
+</pre>
 
 
 ## How to Deploy
