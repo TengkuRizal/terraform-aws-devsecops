@@ -116,7 +116,6 @@ Checkov IaC Security Scan
 The purpose of this pipeline is to detect Terraform formatting issues, validation errors, and infrastructure security misconfigurations before deployment.
 
 ---
-
 ## Project Structure
 
 ```text
@@ -141,7 +140,6 @@ terraform-aws-devsecops/
     ├── security_groups/
     └── vpc/
 ```
-
 ---
 
 ## Production Readiness
