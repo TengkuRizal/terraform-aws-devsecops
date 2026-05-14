@@ -96,9 +96,13 @@ Intentionally skipped (with justification):
 
 ## Project Structure
 <pre>
+## Project Structure
+
+```text
 terraform-aws-devsecops/
-├── .github/workflows/
-│   └── terraform-security.yml
+├── .github/
+│   └── workflows/
+│       └── terraform-security.yml
 ├── .checkov.yaml
 ├── .gitignore
 ├── README.md
@@ -111,10 +115,10 @@ terraform-aws-devsecops/
 │       ├── variables.tf
 │       └── outputs.tf
 └── modules/
-    ├── vpc/
-    ├── s3/
     ├── iam/
-    └── security_groups/
+    ├── s3/
+    ├── security_groups/
+    └── vpc/
 </pre>
 
 
