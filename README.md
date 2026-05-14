@@ -23,7 +23,7 @@ This is part of a broader homelab DevSecOps portfolio that includes:
 ---
 
 ## Architecture
-<pre>
+
 ap-southeast-1 (Singapore)
 │
 ├── VPC: 10.0.0.0/16
@@ -55,7 +55,7 @@ ap-southeast-1 (Singapore)
 └── Terraform State
     ├── S3 backend : encrypted + versioned
     └── State lock : S3 native lockfile (Terraform v1.10+)
-</pre>
+
 
 ---
 
