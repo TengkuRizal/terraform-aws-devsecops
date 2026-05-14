@@ -97,19 +97,42 @@ Intentionally skipped (with justification):
 ## Project Structure
 <pre>
 terraform-aws-devsecops/
-├── .checkov.yaml              # Checkov config and skip rules
-├── .gitignore                 # Excludes state files and sensitive tfvars
+
+├── .github/workflows/
+
+│   └── terraform-security.yml
+
+├── .checkov.yaml
+
+├── .gitignore
+
+├── README.md
+
+├── docs/
+
+│   └── production-readiness.md
+
 ├── environments/
+
 │   └── dev/
-│       ├── backend.tf         # S3 remote state + native lockfile
-│       ├── main.tf            # Root module, provider config, default tags
-│       ├── variables.tf       # Input variable declarations
-│       └── outputs.tf         # VPC, subnet, S3 ARN outputs
+
+│       ├── backend.tf
+
+│       ├── main.tf
+
+│       ├── variables.tf
+
+│       └── outputs.tf
+
 └── modules/
-├── vpc/                   # VPC, subnets, IGW, route tables, flow logs
-├── s3/                    # Secure S3 with all security controls
-├── iam/                   # EC2 role, instance profile, least privilege
-└── security_groups/       # Bastion and app tier SGs
+
+    ├── vpc/
+
+    ├── s3/
+
+    ├── iam/
+
+    └── security_groups/
 </pre>pre>
 ---
 
