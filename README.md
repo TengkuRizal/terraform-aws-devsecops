@@ -94,11 +94,9 @@ Intentionally skipped (with justification):
 
 ---
 
-## Project Structure
 <pre>
 ## Project Structure
 
-```text
 terraform-aws-devsecops/
 ├── .github/
 │   └── workflows/
