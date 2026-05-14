@@ -127,6 +127,12 @@ The purpose of this pipeline is to detect Terraform formatting issues, validatio
 
 ---
 
+## Screenshots
+
+| GitHub Actions Pipeline |
+|---|
+| ![GitHub Actions Pipeline](screenshots/github-actions-passing.png) |
+
 ## Project Structure
 
 ```text
