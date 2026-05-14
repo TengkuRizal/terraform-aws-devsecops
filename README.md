@@ -23,7 +23,6 @@ This is part of a broader homelab DevSecOps portfolio that includes:
 ---
 
 ## Architecture
-
 <pre>
 ap-southeast-1 (Singapore)
 │
@@ -121,7 +120,6 @@ The purpose of this pipeline is to detect Terraform formatting issues, validatio
 <pre>
 ## Project Structure
 
-<pre>
 terraform-aws-devsecops/
 ├── .github/
 │   └── workflows/
