@@ -97,41 +97,23 @@ Intentionally skipped (with justification):
 ## Project Structure
 <pre>
 terraform-aws-devsecops/
-
 ├── .github/workflows/
-
 │   └── terraform-security.yml
-
 ├── .checkov.yaml
-
 ├── .gitignore
-
 ├── README.md
-
 ├── docs/
-
 │   └── production-readiness.md
-
 ├── environments/
-
 │   └── dev/
-
 │       ├── backend.tf
-
 │       ├── main.tf
-
 │       ├── variables.tf
-
 │       └── outputs.tf
-
 └── modules/
-
     ├── vpc/
-
     ├── s3/
-
     ├── iam/
-
     └── security_groups/
 </pre>pre>
 ---
